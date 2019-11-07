@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: netflix-help-desk
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+server:
+  port: 8081

@@ -1,0 +1,9 @@
+CREATE TABLE `ticket` (
+  `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `id_user` BIGINT(20) NOT NULL,
+  `description` VARCHAR(256) NOT NULL,
+  `start_date` DATE NOT NULL,
+  `end_date` DATE NULL,
+  `status` TINYINT(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
