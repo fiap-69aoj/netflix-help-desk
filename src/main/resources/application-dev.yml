@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/netflix-help-desk
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate.format_sql: true
+  zipkin:
+    baseUrl: http://localhost:9411/
+
+kafka:
+  bootstrapAddress: localhost:9092
+
+eureka:
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
