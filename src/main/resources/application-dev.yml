@@ -7,3 +7,12 @@ spring:
   jpa:
     show-sql: true
     hibernate.format_sql: true
+  zipkin:
+    baseUrl: http://localhost:9411/
+
+kafka:
+  bootstrapAddress: localhost:9092
+
+eureka:
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/

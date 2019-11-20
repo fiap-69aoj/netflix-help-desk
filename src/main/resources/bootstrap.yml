@@ -1,6 +1,6 @@
 spring:
   application:
-    name: netflix-help-desk
+    name: netflix-helpdesk
   profiles:
     active:
       dev
