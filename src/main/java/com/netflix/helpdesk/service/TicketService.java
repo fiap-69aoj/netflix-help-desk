@@ -8,6 +8,9 @@ import com.netflix.helpdesk.repository.TicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class TicketService {
 
@@ -23,6 +26,12 @@ public class TicketService {
         final TicketEntity ticketEntity = ticketConverter.toTicketEntity(requestWithStatus);
         final TicketEntity ticket = ticketRepository.save(ticketEntity);
         return ticketConverter.toTicketResponse(ticket);
+    }
+
+    public List<TicketResponse> list() {
+        return ticketRepository.findAll()
+            .stream().map(ticketConverter::toTicketResponse)
+            .collect(Collectors.toList());
     }
 
 }
