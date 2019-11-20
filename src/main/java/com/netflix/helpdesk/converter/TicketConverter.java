@@ -18,9 +18,14 @@ public class TicketConverter {
             .build();
     }
 
-    public TicketResponse toTicketResponse(final TicketEntity entity) {
+    public TicketResponse toTicketResponse(final TicketEntity ticketEntity) {
         return TicketResponse.builder()
-            .id(entity.getId())
+            .id(ticketEntity.getId())
+            .idUser(ticketEntity.getIdUser())
+            .description(ticketEntity.getDescription())
+            .startDate(ticketEntity.getStartDate())
+            .endDate(ticketEntity.getEndDate())
+            .status(ticketEntity.getStatus())
             .build();
     }
 
